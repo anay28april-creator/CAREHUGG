@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareHugg</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --surface: #ffffff;
+      --primary: #1f4d7a;
+      --accent: #f4aa3d;
+      --text: #1f2937;
+      --muted: #6b7280;
+    }
+    body { margin:0; font-family:Inter,system-ui,sans-serif; color:var(--text); background:var(--bg); line-height:1.6; }
+    a { color:inherit; text-decoration:none; }
+    .container { width:min(1120px,calc(100% - 2rem)); margin:0 auto; }
+    .hero { min-height:80vh; background:linear-gradient(135deg,#0f2a45 0%,#1f4d7a 100%); color:#fff; display:grid; place-items:center; text-align:center; padding:4rem 1rem; }
+    .hero-content { max-width:720px; }
+    .logo { width:220px; max-height:180px; margin:0 auto 1.5rem; display:block; object-fit:contain; }
+    .hero .tag { text-transform:uppercase; letter-spacing:.2em; margin-bottom:1rem; color:rgba(255,255,255,.78); }
+    .hero h1 { font-size:clamp(2.5rem,5vw,4.2rem); margin:0; }
+    .hero p { margin:1.5rem 0 2rem; font-size:1.1rem; color:rgba(255,255,255,.92); }
+    .btn { display:inline-flex; align-items:center; justify-content:center; background:var(--accent); color:#1f2937; padding:1rem 1.8rem; border-radius:999px; font-weight:700; transition:.2s; }
+    .btn:hover { transform:translateY(-2px); box-shadow:0 18px 30px rgba(244,170,61,.2); }
+    .product-grid { display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); margin-top:2rem; }
+    .product-card { background:var(--surface); border:1px solid rgba(31,41,55,.08); border-radius:24px; padding:2rem; color:var(--text); min-height:220px; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 15px 40px rgba(15,23,39,.05); }
+    .product-card h3 { margin-top:0; margin-bottom:1rem; }
+    .product-card p { color:var(--muted); }
+    .product-card .btn { background:var(--accent); color:#1f2937; margin-top:1.25rem; }
+    .section-header p { margin:0 0 .4rem; color:var(--accent); font-weight:700; text-transform:uppercase; letter-spacing:.14em; font-size:.85rem; }
+    .section-header h2 { margin:.5rem 0 1.5rem; font-size:clamp(1.8rem,3vw,2.8rem); }
+    .about,.why-us { padding:4rem 0; }
+    .about p,.why-us p { color:var(--muted); max-width:720px; }
+    .split-layout { display:grid; gap:2rem; align-items:start; grid-template-columns:minmax(0,1.3fr) minmax(260px,1fr); }
+    .split-layout ul { list-style:none; padding:0; margin:1.5rem 0 0; display:grid; gap:.85rem; }
+    .split-layout li { background:rgba(31,77,122,.07); border-radius:999px; padding:.95rem 1rem; }
+    .contact-card { background:linear-gradient(180deg,rgba(31,77,122,.95),rgba(31,77,122,.88)); color:#fff; border-radius:24px; padding:2rem; display:grid; gap:1rem; }
+    .contact-card h3 { margin:0; }
+    .contact-item { display:flex; gap:.5rem; align-items:center; }
+    .contact-item a { color:#fff; text-decoration:underline; }
+    .footer { padding:2rem 1rem; text-align:center; color:var(--muted); background:#eff4fb; }
+    @media(max-width:768px){ .hero{padding:3rem 1rem;} .split-layout{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <img src="image.png" alt="CareHugg logo" class="logo">
+      <p class="tag">Quality home cleaning supplies</p>
+      <h1>CareHugg</h1>
+      <p>Your trusted source for everyday cleaning and home care essentials.</p>
+      <a class="btn" href="#products">Shop Our Products</a>
+    </div>
+  </header>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <p>About Us</p>
+        <h2>We provide reliable supplies to keep your home fresh and clean.</h2>
+      </div>
+      <p>CareHugg offers high-quality cleaning and household products designed to make daily chores easier and more effective. Our goal is to deliver practical, durable, and trusted solutions that help you care for your home with confidence.</p>
+    </div>
+  </section>
+
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <p>Our Products</p>
+        <h2>Essential cleaning tools for every task.</h2>
+      </div>
+      <div class="product-grid">
+        <article class="product-card">
+          <div>
+            <h3>Microfiber Cloth</h3>
+            <p>Soft, absorbent, and reusable cloth designed for streak-free cleaning of glass, countertops, and electronics.</p>
+          </div>
+          <a class="btn" href="https://www.amazon.in/Microfiber-Cleaning-Cloth-Reusable-Absorbent/dp/B0H1HHKXY1" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-us">
+    <div class="container split-layout">
+      <div>
+        <p>Why Choose CareHugg?</p>
+        <h2>Simple, supply-only shopping for home care essentials.</h2>
+        <ul>
+          <li>Clear product details and easy purchase path</li>
+          <li>Quality materials for lasting use</li>
+          <li>Trusted purchase experience with Amazon fulfillment</li>
+        </ul>
+      </div>
+      <div class="contact-card">
+        <h3>Questions about our products?</h3>
+        <p>We’re happy to help with product details and ordering support.</p>
+        <div class="contact-item">
+          <strong>Email:</strong> <a href="mailto:carehugg@gmail.com">carehugg@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <strong>Phone:</strong> <a href="tel:+918790102190">+91 8790102190</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 CareHugg. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+      
