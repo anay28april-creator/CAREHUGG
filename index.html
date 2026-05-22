@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CareHugg</title>
+
+  <!-- PWA manifest + theme -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1f4d7a">
+
   <style>
     :root {
       --bg: #f6f7fb;
@@ -110,8 +115,14 @@
   <footer class="footer">
     <p>&copy; 2026 CareHugg. All rights reserved.</p>
   </footer>
+
+  <!-- Register Service Worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(() => console.log("Service Worker registered"))
+        .catch(err => console.error("Service Worker failed:", err));
+    }
+  </script>
 </body>
 </html>
-
-
-      
